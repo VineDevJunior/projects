@@ -2,6 +2,7 @@
 <html lang="pt-br">
 
 <head>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
@@ -16,37 +17,42 @@
     <img class="logo" src="./assets/logo.gif">
     <main>
         <p>Converter <b>de</b></p>
-        <select>
-            <option>R$ Real Brasileiro</option>
+        <select class="select-key-first">
+            <option value="real">R$ Real Brasileiro</option>
+            <option value="dolar">US$ Dólar Americano</option>
+            <option value="libra">£ Libra</option>
+            <option value="euro">€ Euro</option>
         </select>
         <p>Converter <b>para</b></p>
-        <select>
+        <select class="select-key">
+            <option value="real">R$ Real Brasileiro</option>
             <option value="dolar">US$ Dólar Americano</option>
             <option value="libra">£ Libra</option>
             <option value="euro">€ Euro</option>
         </select>
 
         <p><b>Valor</b></p>
-        <input type="text" placeholder="R$10.000,00">
+        <input class="input" type="number" placeholder="R$10.000,00">
 
-        <button>Converter</button>
+        <button class="buttonconvert">Converter</button>
 
         <section>
             <div class="container">
             <div class="container-first">
-                <img src="./assets/bandeira-brazil.png">
+                <img class="br-flag" src="./assets/bandeira-brazil.png">
                 <p>Real</p>
-                <p class="paragraph">R$10.000,00</p>
+                <p class="paragraph brazilian-real">R$10.000,00</p>
             </div>
             <img class="arrow" src="./assets/arrow.png">
             <div class="container-second">
-                <img src="./assets/bandeira-EUA.png">
+                <img class="usa-flag" src="./assets/bandeira-EUA.png">
                 <p>Dólar Americano</p>
-                <p class="paragraph">US$2.000,00</p>
+                <p id="eua-dolar" class="paragraph eua-dolar">US$2.000,00</p>
             </div>
             </div>
         </section>
     </main>
 </body>
+<script src="./scripts.js"></script>
 
 </html>
