@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas</title>
+</head>
+
+<body>
+    <img class="logo" src="./assets/logo.gif">
+    <main>
+        <p>Converter <b>de</b></p>
+        <select class="select-key-first">
+            <option value="real">R$ Real Brasileiro</option>
+        </select>
+        <p>Converter <b>para</b></p>
+        <select class="select-key">
+            <option value="dolar">US$ Dólar Americano</option>
+            <option value="libra">£ Libra</option>
+            <option value="euro">€ Euro</option>
+        </select>
+
+        <p><b>Valor</b></p>
+        <input class="input" type="number" placeholder="R$10.000,00">
+
+        <button class="buttonconvert">Converter</button>
+
+        <section>
+            <div class="container">
+            <div class="container-first">
+                <img class="br-flag" src="./assets/bandeira-brazil.png">
+                <p>Real</p>
+                <p class="paragraph brazilian-real">R$10.000,00</p>
+            </div>
+            <img class="arrow" src="./assets/arrow.png">
+            <div class="container-second">
+                <img class="usa-flag" src="./assets/bandeira-EUA.png">
+                <p class="text-convert">Dólar Americano</p>
+                <p id="eua-dolar" class="paragraph eua-dolar">US$2.000,00</p>
+            </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="./scripts.js"></script>
+
+</html>
