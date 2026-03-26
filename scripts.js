@@ -1,15 +1,17 @@
 const buttonToConvert = document.querySelector(".buttonconvert");
 
-function convertCurrency() {
+async function convertCurrency() {
     const inputValue = document.querySelector(".input").value;
     const currencyValueToConvert = document.querySelector(".brazilian-real");
     const currencyValueConverted = document.querySelector(".eua-dolar");
     const selectKey = document.querySelector(".select-key").value;
     const textConverted = document.querySelector(".text-convert");
 
-    const dolarToday = 5.57;
-    const euroToday = 6.57;
-    const libraToday = 7.53;
+    const data = await fetch("https://economia.awesomeapi.com.br/json/last/:moedas").then(response => response.json())
+    
+    const dolarToday = data.USDBRL.high
+    const euroToday = data.EURBRL.high
+    const libraToday = data.GBPBRL.high
 
     const convertValue = inputValue / dolarToday;
 
